@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'image/fitjourney-logo.png' %}" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#features">
+                    <i class="fas fa-th-list"></i> Features
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#signup">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'logout' %}">
+                    <i class="fas fa-sign-in-alt"></i> LogOut
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Welcome Section -->
+<header class="bg-dark text-white text-center py-5" style="background: url('images/background.jpg') no-repeat center center/cover;">
+    <div class="container">
+        <h1>Welcome to the Fitness Tracking and Workout Planner</h1>
+        <p class="lead">Track your progress, set goals, and plan your workouts with ease.</p>
+        <a href="#signup" class="btn btn-lg btn-secondary mt-4">Get Started</a>
+    </div>
+</header>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Key Features</h2>
+        <div class="row mt-4">
+            <div class="col-md-4 text-center">
+                <img src="images/dashboard.png" alt="Dashboard" class="img-fluid mb-3">
+                <h4>Personalized Dashboard</h4>
+                <p>View your progress and statistics in a personalized dashboard.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/workout.png" alt="Workout Logging" class="img-fluid mb-3">
+                <h4>Workout Logging</h4>
+                <p>Log your workouts and track your activities with ease.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/goals.png" alt="Goal Setting" class="img-fluid mb-3">
+                <h4>Goal Setting</h4>
+                <p>Set and track your fitness goals to stay motivated.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light py-4 text-center">
+    <div class="container">
+        <p>&copy; 2024 Fitness Tracking and Workout Planner. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+{%endblock%}
+
