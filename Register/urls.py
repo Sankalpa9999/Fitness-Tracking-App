@@ -10,5 +10,9 @@ urlpatterns = [
     path('high/',views.high, name='high'),
     path('medium/',views.medium, name='medium'),
     path('low/',views.low, name='low'),
+    path('trainer/',views.trainer, name='trainer'),
+    
+    
+
 ]
   

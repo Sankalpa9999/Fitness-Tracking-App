@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
 
+
+
 # Create your views here.
 from .forms import UserRegisterForm
 from django.contrib import messages
@@ -63,3 +65,9 @@ def medium(request):
 
 def low(request):
     return render(request,'user/low.html')
+
+
+def trainer(request):
+    return render(request,'trainer/trainerhome.html')
+
+
